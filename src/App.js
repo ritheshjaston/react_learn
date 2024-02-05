@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
-
+import logos from './IMAGES/Mr3W.gif';
+import Arrowfunction from './Components/Arrowfunction';
+import Arraymethod from './Components/Arraymethod';
 function App() {
+  const style={
+    color:'green',
+    background:'yellow'
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1 style={{color:'red',background:"yellow"}}>Hello</h1>
+      <h2 style={style}>Good Morning</h2>
+      <h2 className='newh2'>Good Morning</h2>
+
+      <img src={logos} alt="" />
+      <Arrowfunction/>
+      <Arraymethod/>
     </div>
   );
 }
