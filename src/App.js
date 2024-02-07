@@ -3,6 +3,7 @@ import logos from './IMAGES/Mr3W.gif';
 import Arrowfunction from './Components/Arrowfunction';
 import Arraymethod from './Components/Arraymethod';
 import SpreadOperator from './Components/SpreadOperator';
+import Destructuring from './Components/Destructuring';
 function App() {
   const style={
     color:'green',
@@ -18,6 +19,7 @@ function App() {
       <Arrowfunction/>
       <Arraymethod/>
       <SpreadOperator/>
+      <Destructuring/>
     </div>
   );
 }
