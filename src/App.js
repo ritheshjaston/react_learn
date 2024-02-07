@@ -5,6 +5,7 @@ import Arraymethod from './Components/Arraymethod';
 import SpreadOperator from './Components/SpreadOperator';
 import Destructuring from './Components/Destructuring';
 import TernaryOperator from './Components/TernaryOperator';
+import Modules from './Components/Modules';
 function App() {
   const style={
     color:'green',
@@ -22,6 +23,7 @@ function App() {
       <SpreadOperator/>
       <Destructuring/>
       <TernaryOperator/>
+      <Modules/>
     </div>
   );
 }
