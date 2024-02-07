@@ -4,6 +4,7 @@ import Arrowfunction from './Components/Arrowfunction';
 import Arraymethod from './Components/Arraymethod';
 import SpreadOperator from './Components/SpreadOperator';
 import Destructuring from './Components/Destructuring';
+import TernaryOperator from './Components/TernaryOperator';
 function App() {
   const style={
     color:'green',
@@ -20,6 +21,7 @@ function App() {
       <Arraymethod/>
       <SpreadOperator/>
       <Destructuring/>
+      <TernaryOperator/>
     </div>
   );
 }
