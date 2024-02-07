@@ -17,6 +17,6 @@ export {student,course}
 // Default export   
 // exported only once in default export
 const Handleclick=()=>{
-    alert("Hello Im export function");
+    // alert("Hello Im export function");
 }
 export default Handleclick;

@@ -6,11 +6,16 @@ import SpreadOperator from './Components/SpreadOperator';
 import Destructuring from './Components/Destructuring';
 import TernaryOperator from './Components/TernaryOperator';
 import Modules from './Components/Modules';
+import Props from './Components/Props';
 function App() {
   const style={
     color:'green',
     background:'yellow'
   }
+  const handleclick=()=>{
+    alert("Props using function");
+  }
+  const course="Jaston";
   return (
     <div>
       <h1 style={{color:'red',background:"yellow"}}>Hello</h1>
@@ -24,6 +29,7 @@ function App() {
       <Destructuring/>
       <TernaryOperator/>
       <Modules/>
+    <Props name={course} rollno='90' fcn={handleclick}/>
     </div>
   );
 }
