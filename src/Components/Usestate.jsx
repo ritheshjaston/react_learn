@@ -20,7 +20,7 @@ export default function Usestate() {
         }
     }
     const handler=(e)=>{
-        setdata({ [e.target.name]: e.target.value })
+        setdata({ ...data,[e.target.name]: e.target.value })
         console.log(data)
     }
 
@@ -39,7 +39,8 @@ export default function Usestate() {
 
             {/* form data */}
             <input type="text" name='myname' onChange={handler} />
-            <h1>{data.myname}</h1>
+            <input type="numer" name='phone' onChange={handler} />
+            {/* <h1>{data.myname}</h1> */}
         </div>
     )
 }
