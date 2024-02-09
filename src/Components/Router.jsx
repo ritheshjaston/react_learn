@@ -5,6 +5,7 @@ import { Route, Routes, BrowserRouter } from 'react-router-dom'
 import Arraymethod from './Arraymethod'
 import Arraytable from './Arraytable'
 import Usestate from './Usestate'
+import Useeffect from './Useeffect'
 
 import img1 from '../IMAGES/img1.jpg';
 import img2 from '../IMAGES/img2.jpg';
@@ -62,6 +63,7 @@ export default function Router() {
                     <Route exact path='/Array' element={<Arraymethod/>}/>
                     <Route exact path='/task2' element={<Arraytable employee={employee}/>} />
                     <Route exact path='/state' element={<Usestate/>} />
+                    <Route exact path='/effect' element={<Useeffect/>} />
                 </Routes>
             </BrowserRouter>
         </div>

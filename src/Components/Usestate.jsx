@@ -39,8 +39,9 @@ export default function Usestate() {
 
             {/* form data */}
             <input type="text" name='myname' onChange={handler} />
-            <input type="numer" name='phone' onChange={handler} />
-            {/* <h1>{data.myname}</h1> */}
+            <input type="number" name='phone' onChange={handler} />
+            <h1>{data.myname}</h1>
+            <h1>{data.phone}</h1>
         </div>
     )
 }
