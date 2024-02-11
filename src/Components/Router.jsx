@@ -7,11 +7,15 @@ import Arraytable from './Arraytable'
 import Usestate from './Usestate'
 import Useeffect from './Useeffect'
 
+
 import img1 from '../IMAGES/img1.jpg';
 import img2 from '../IMAGES/img2.jpg';
 import img3 from '../IMAGES/img3.jpg';
 import img4 from '../IMAGES/img4.jpg';
 import img5 from '../IMAGES/img5.jpg';
+
+import Tableform from './Tableform'
+import Darklight from './Darklight'
 export default function Router() {
     const employee=[{
         profile:{img:img1,name:"RITHESH"},
@@ -64,6 +68,8 @@ export default function Router() {
                     <Route exact path='/task2' element={<Arraytable employee={employee}/>} />
                     <Route exact path='/state' element={<Usestate/>} />
                     <Route exact path='/effect' element={<Useeffect/>} />
+                    <Route exact path='/table' element={<Tableform/>} />
+                    <Route exact path='/dark' element={<Darklight/>} />
                 </Routes>
             </BrowserRouter>
         </div>

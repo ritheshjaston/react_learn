@@ -18,3 +18,51 @@
   .con{
     display: flex;
   }
+
+  .main{
+    width: 40%;
+    background: yellow;
+    height: 400px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 32px 3px black;
+  }
+  .main input{
+    margin-left: 10%;
+    width: 71%;
+    height: 25px;
+    border-radius: 4px;
+    color: blue;
+  }
+  .main label{
+    color: black;
+    margin-left: 10%;
+  }
+  .main .btn{
+    height: 44px;
+    background: #FFC107;
+    font-size: larger;
+  }
+  th{
+    background-color: #FFC107;
+  }
+  .tbl{
+    width: 80%;
+    margin: auto;
+  }
+  .userstate{
+    font-size: 186px;
+    text-align: center;
+  }
+  .btnmode{
+    width: 30%;
+    height: 40px;
+  }
+  .maindark{
+    margin-top: 0px;
+    padding-top: 0px;
+    width: 80%;
+    height: fit-content;
+    margin: auto;
+  }
