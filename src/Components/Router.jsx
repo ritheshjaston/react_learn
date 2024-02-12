@@ -16,6 +16,7 @@ import img5 from '../IMAGES/img5.jpg';
 
 import Tableform from './Tableform'
 import Darklight from './Darklight'
+import LocalStorageget from './LocalStorageget'
 export default function Router() {
     const employee=[{
         profile:{img:img1,name:"RITHESH"},
@@ -71,6 +72,7 @@ export default function Router() {
                     <Route exact path='/table' element={<Tableform/>} />
                     <Route exact path='/dark' element={<Darklight/>} />
                     <Route exact path='/local' element={<Localstore/>} />
+                    <Route exact path='/localget' element={<LocalStorageget/>} />
                 </Routes>
             </BrowserRouter>
         </div>

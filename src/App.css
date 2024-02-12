@@ -13,7 +13,7 @@
     background-color: aqua;
   }
   table{
-    margin-top: 50px;
+    /* margin-top: 50px; */
   }
   .con{
     display: flex;
@@ -45,7 +45,7 @@
     font-size: larger;
   }
   th{
-    background-color: #FFC107;
+    /* background-color: #FFC107; */
   }
   .tbl{
     width: 80%;
