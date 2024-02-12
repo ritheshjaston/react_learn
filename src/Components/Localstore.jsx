@@ -12,7 +12,10 @@ export default function Localstore() {
         const details={
             u_id:userid,...data
         }
-        localStorage.setItem("User", JSON.stringify(details))
+        const finaldata=[...value,details];
+        setvalue(finaldata);
+        localStorage.setItem("User", JSON.stringify(finaldata))
+
     }
     const change = (e) => {
         setdata({ ...data, [e.target.name]: e.target.value });
