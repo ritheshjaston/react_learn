@@ -6,7 +6,7 @@ import Arraymethod from './Arraymethod'
 import Arraytable from './Arraytable'
 import Usestate from './Usestate'
 import Useeffect from './Useeffect'
-
+import Localstore from './Localstore'
 
 import img1 from '../IMAGES/img1.jpg';
 import img2 from '../IMAGES/img2.jpg';
@@ -70,6 +70,7 @@ export default function Router() {
                     <Route exact path='/effect' element={<Useeffect/>} />
                     <Route exact path='/table' element={<Tableform/>} />
                     <Route exact path='/dark' element={<Darklight/>} />
+                    <Route exact path='/local' element={<Localstore/>} />
                 </Routes>
             </BrowserRouter>
         </div>
