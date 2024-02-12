@@ -3,9 +3,9 @@ import '../App.css';
 export default function Tableform() {
     const [datatb, setdatatb] = useState([]);
     const [data, setdata] = useState({});
-    const displaytable = async () => {
-        await setdatatb([...datatb, data])
-        await console.log(datatb);
+    const displaytable =  () => {
+         setdatatb([...datatb, data]);
+         console.log(datatb);
     }
     const handler = (e) => {
         setdata({ ...data, [e.target.name]: e.target.value })
