@@ -22,6 +22,7 @@ export default function LocalStorageget() {
     const HandleDelete=(id)=>{
         const DeleteUser=value.filter((data)=>data.u_id!=id)
         console.log(DeleteUser);
+        setvalue(DeleteUser);  //reflect the changes in front end
         localStorage.setItem("User",JSON.stringify(DeleteUser));
         alert("Deletion Suceessful....")
         // alert(id);
