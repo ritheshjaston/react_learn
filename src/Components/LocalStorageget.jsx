@@ -6,6 +6,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import Button from '@mui/material/Button';
 
 export default function LocalStorageget() {
     const [value,setvalue]=useState([]);
@@ -16,6 +17,18 @@ export default function LocalStorageget() {
         console.log(value);
 
     },[])
+
+
+    const HandleDelete=(id)=>{
+        const DeleteUser=value.filter((data)=>data.u_id!=id)
+        console.log(DeleteUser);
+        localStorage.setItem("User",JSON.stringify(DeleteUser));
+        alert("Deletion Suceessful....")
+        // alert(id);
+    }
+    const HandleEdit=(id)=>{
+        alert(id);
+    }
     return (
         <div>
             <h1>Localstorage Get</h1>
@@ -44,6 +57,11 @@ export default function LocalStorageget() {
                                 <TableCell align="right">{row.email}</TableCell>
                                 <TableCell align="right">{row.phone}</TableCell>
                                 <TableCell align="right">{row.address}</TableCell>
+                                <TableCell align="right">
+
+                                <Button variant="outlined" onClick={()=>HandleEdit(row.u_id)} >Edit</Button>
+                                <Button variant="outlined" style={{marginLeft:"10px"}} color='error' onClick={()=>HandleDelete(row.u_id)}>Delete</Button>
+                                </TableCell>
                             </TableRow>
                         ))}
                     </TableBody>
