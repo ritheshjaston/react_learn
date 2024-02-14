@@ -1,4 +1,4 @@
-import React,{useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -7,27 +7,28 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom';
 
 export default function LocalStorageget() {
-    const [value,setvalue]=useState([]);
-    useEffect(()=>{
-        const Alldata=JSON.parse(localStorage.getItem("User"));
+    const [value, setvalue] = useState([]);
+    useEffect(() => {
+        const Alldata = JSON.parse(localStorage.getItem("User"));
         console.log(Alldata)
         setvalue(Alldata);
         console.log(value);
 
-    },[])
+    }, [])
 
 
-    const HandleDelete=(id)=>{
-        const DeleteUser=value.filter((data)=>data.u_id!=id)
+    const HandleDelete = (id) => {
+        const DeleteUser = value.filter((data) => data.u_id != id)
         console.log(DeleteUser);
         setvalue(DeleteUser);  //reflect the changes in front end
-        localStorage.setItem("User",JSON.stringify(DeleteUser));
+        localStorage.setItem("User", JSON.stringify(DeleteUser));
         alert("Deletion Suceessful....")
         // alert(id);
     }
-    const HandleEdit=(id)=>{
+    const HandleEdit = (id) => {
         alert(id);
     }
     return (
@@ -46,7 +47,7 @@ export default function LocalStorageget() {
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                    {value?.map((row) => (   //question mark eliminates error if you have null value in local storage
+                        {value?.map((row) => (   //question mark eliminates error if you have null value in local storage
                             <TableRow
                                 key={row.name}
                                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
@@ -59,9 +60,11 @@ export default function LocalStorageget() {
                                 <TableCell align="right">{row.phone}</TableCell>
                                 <TableCell align="right">{row.address}</TableCell>
                                 <TableCell align="right">
-
-                                <Button variant="outlined" onClick={()=>HandleEdit(row.u_id)} >Edit</Button>
-                                <Button variant="outlined" style={{marginLeft:"10px"}} color='error' onClick={()=>HandleDelete(row.u_id)}>Delete</Button>
+                                    {/* Send Data on link tag */}
+                                    <Link to={`/update/${row.u_id}`}>  
+                                        <Button variant="outlined"  >Edit</Button>
+                                    </Link>
+                                    <Button variant="outlined" style={{ marginLeft: "10px" }} color='error' onClick={() => HandleDelete(row.u_id)}>Delete</Button>
                                 </TableCell>
                             </TableRow>
                         ))}
